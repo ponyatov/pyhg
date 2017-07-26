@@ -35,6 +35,7 @@ lib/$(PLY_GZ):
 lib/$(PLY)/README.md: lib/$(PLY_GZ)
 	cd lib ; tar zx < $(PLY_GZ)
 	touch $@
+
 lib/$(HGDB)/readme.html: lib/$(HGDB_GZ)
 	cd lib ; tar zx < $(HGDB_GZ)
 	touch $@

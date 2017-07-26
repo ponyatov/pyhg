@@ -1,1 +1,8 @@
 # comment
+
+primitives = [				# vector
+	[ sym bols ]
+	[ -001 +02.3 +04e-05 ]	# numbers
+	[ 0xDeadBeef 0b1101	]	# machine numbers
+	'string'
+]
