@@ -15,10 +15,12 @@ HGDB_GZ = hgdbdist-$(HGDB_VER)-final.tar.gz
 
 PKGS = lib/$(JYTHON) lib/$(PLY)/README.md lib/$(HGDB)/readme.html
 
+HGDB_LIB = lib/$(HGDB)/lib/hgdb-$(HGDB_VER).jar:lib/$(HGDB)/lib/hgbdbje-$(HGDB_VER).jar:lib/$(HGDB)/lib/je-5.0.34.jar
+
 ## test run (make default)
 
-test.log : test.src test.py lib/$(JYTHON) $(PKGS)
-	JYTHONPATH=lib/$(PLY) java -jar lib/$(JYTHON) test.py
+test.log : test.src test.py lib/$(JYTHON) $(PKGS) Makefile
+	JYTHONPATH=lib/$(PLY):$(HGDB_LIB) java -jar lib/$(JYTHON) test.py
 	
 ## installation
 

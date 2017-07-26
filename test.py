@@ -1,4 +1,10 @@
-log = open('test.log','w') 
+log = open('test.log','w')
+
+### HGDB interfacing
+
+from org.hypergraphdb import HyperGraph
+# import org.hypergraphdb.atom.HGSubsumes
+HyperGraph('db/test').close()
 
 ### core classes
 
