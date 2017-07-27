@@ -20,7 +20,7 @@ HGDB_LIB = lib/$(HGDB)/lib/hgdb-$(HGDB_VER).jar:lib/$(HGDB)/lib/hgbdbje-$(HGDB_V
 ## test run (make default)
 
 test.log : test.src test.py lib/$(JYTHON) $(PKGS) Makefile
-	JYTHONPATH=lib/$(PLY):$(HGDB_LIB) java -jar lib/$(JYTHON) test.py
+	JYTHONPATH=lib/$(PLY):$(HGDB_LIB) java -cp $(HGDB_LIB) -jar lib/$(JYTHON) test.py
 	
 ## installation
 
